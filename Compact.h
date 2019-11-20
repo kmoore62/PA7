@@ -9,7 +9,7 @@ protected:
   int tos; //this is the top of stack
 public:
   Compact();
-  Compact(int);
+ // Compact(int);// I think the implementation of the normal constructor will work instead of this
   ~Compact();
   bool empty() const;
   bool full() const;
