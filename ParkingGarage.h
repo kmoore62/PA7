@@ -25,6 +25,9 @@ public:
   
   isVacant(CarType);//check if there is a parking spot and display VACANT or FULL
   checkStatus(); //display the entire map of each lane
+  
+  //I think we will need a copy constructor and or an assignment operator overloading
+  //because we will be assigning child classes to base class later on
 
 
 
