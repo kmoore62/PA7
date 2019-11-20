@@ -25,13 +25,6 @@ int main(){
 
 //this is the capacity. it is the number of cars that can fit in each row
 const int CAPACITY= 10;
-
-  
- cout << endl;
- cout <<"Row 1= Compact Cars" << endl; 
- displayCars();
- cout <<"Row 2= Trucks" << endl; 
-  displayTrucks();
  
 //this is a count of how many trucks and cars exist
 int truckCount=0;
@@ -73,19 +66,28 @@ if(theFile.is_open()){
 
 
 //create a random number generator that generates a random number from 0 to 20
+  int numb_removed= rand() % 21
+    cout<<"This is the number of cars removed"<<numb_removed<<endl<<endl;
 //this number will decide how many cars will be removed. name this variable something like carsRemoved
 
 //crate a for loop that will  generate a random number carsRemoved number of times
-for(int i=0; i<carsRemoved; i++){
+for(int i=0; i<numb_removed; i++){
 
   //generate random number 0 or 1
+  int randomNumber= rand()%2;
   if(randomNumber==0 && compactCount!=0){
-    //pop a compact car
+    //pop a compact car- pop through the parkingGarage class, which can call the vehicle class.
   }
   else if(randomNumber==1 && truckCount!=0){
     //pop a truck
   }
 }//end of for loop
+  
+  cout << endl;
+ cout <<"Row 1= Compact Cars" << endl; 
+ displayCars();
+ cout <<"Row 2= Trucks" << endl; 
+  displayTrucks();
 
 //now the parking lot needs to be displayed
 cout<<"Row 1"<<endl;
