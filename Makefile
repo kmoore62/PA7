@@ -1,0 +1,3 @@
+a.out: vehicle.o main.o Truck.o Compact.o ParkingGarage.o
+
+......
