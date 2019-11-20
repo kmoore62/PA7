@@ -31,6 +31,13 @@ void ParkingGarage::isVacant(CarType){
 }
 
 void ParkingGarage:: checkStatus(){
+  while (true){
+  
+   cout << "------------------------------------------------" << endl;
+	cout << "|     Lane 1    |    Lane 2     |    Lane 3    |" << endl;
+	cout << "|---------------|---------------|--------------|" << endl;
+  cout << "|
+  }
 //should this be void?
 }
 
