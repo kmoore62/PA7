@@ -57,6 +57,16 @@ cout<<"Row 1"<<endl;
 //code to display compact cars
 cout<<"Row 2"<<endl;
 // It may look something like the following
+
+ // the following might go under the checkStatus ();
+  /*  
+  cout << endl;
+
+	cout << "----------------------------------------------------------------------------------------" << endl;
+	cout << "| First Name    | Last Name     |     SSN      | Department |     Role    |   Salary   |" << endl;
+	cout << "|---------------|---------------|--------------|------------|-------------|------------|" << endl;
+  
+  */ displaying help
 //--------------------------------------------------------------------
 //| truck | truck | truck | truck | vacant | vacant |
 
