@@ -2,6 +2,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 #include "ParkingGarage.h"
 #include "Vehicle.h"
 #include "compact.h"
@@ -15,25 +16,41 @@ int main(){
 const int CAPACITY= 10;
 
 //this is a count of how many trucks and cars exist
-int truckCount;
-int compactCount;
+int truckCount=0;
+int compactCount=0;
 
 //declare time seed
+  srand(time(NULL));
 
 //because vehicle is an abstract class, an object of it cannot be declared. So, and array of size capacity times 2
 // of pointers should be created in order to store the child class objects we will be creating. Probalby name
 //it something like park
-//DECLARE THAT HERE
+Vehicle* vehicles[CAPACITY*2];
 
-
-//declare child objects so that they can be used later
-compact ccar;
-truck tcar;
-
-//accept the input from the text file
-
-//based on the given input, assign it to a truck or compact
-
+ifstream theFile("park.txt");
+if(theFile.is_open()){
+  string typeOfCar;
+  while(theFile>>typeOfCar){
+   if(typeOfCar=="compact"){
+     //declare a compact car object
+     Compact comcar;
+     if(compactCount==0){
+       comcar(CAPACITY);
+     }
+     compactCount++;
+   }
+   else if (typeOfCar=="truck"){
+     //declare a truck object
+     Truck truck;
+     if(truckCount==0){
+       truck(CAPACITY);
+     }
+     truckCount++;
+   }
+  }
+  
+}
+  theFile.close();
 //close the text file
 
 
@@ -57,16 +74,6 @@ cout<<"Row 1"<<endl;
 //code to display compact cars
 cout<<"Row 2"<<endl;
 // It may look something like the following
-
- // the following might go under the checkStatus ();
-  /*  
-  cout << endl;
-
-	cout << "----------------------------------------------------------------------------------------" << endl;
-	cout << "| First Name    | Last Name     |     SSN      | Department |     Role    |   Salary   |" << endl;
-	cout << "|---------------|---------------|--------------|------------|-------------|------------|" << endl;
-  
-  */ displaying help
 //--------------------------------------------------------------------
 //| truck | truck | truck | truck | vacant | vacant |
 
