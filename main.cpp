@@ -10,11 +10,29 @@
 
 using namespace std;
 
+void DisplayCars()
+{
+  ParkingGarage obj1;
+  obj1.checkStatus();
+  
+};
+void DisplayTrucks (){
+ParkingGarage obj2;
+  obj2.checkStatus();
+};
+
 int main(){
 
 //this is the capacity. it is the number of cars that can fit in each row
 const int CAPACITY= 10;
 
+  
+ cout << endl;
+ cout <<"Row 1= Compact Cars" << endl; 
+ displayCars();
+ cout <<"Row 2= Trucks" << endl; 
+  displayTrucks();
+ 
 //this is a count of how many trucks and cars exist
 int truckCount=0;
 int compactCount=0;
