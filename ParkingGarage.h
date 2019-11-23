@@ -1,11 +1,14 @@
 #pragma once
 
-//define carType as Dr.Park gives even though we aare not dealing with
-//motorcyclys or busses right now
-enum CarTypr{COMPACT, TRUCK, MOTORCYCLE, BUS};
-
-ParkingGarage class{
+class ParkingGarage{
 private:
+  
+int* compactArray;
+int* truckArray;
+int size;
+int compacttos;
+int trucktos;
+  
   //any private members we might need
   //I think we might need a counter of how many trucks and compacts we have
   //I think we need a counter that keeps track of how many total cars we have
@@ -23,8 +26,9 @@ public:
   
   void pop(CarType); //unpark a car
   
-  isVacant(CarType);//check if there is a parking spot and display VACANT or FULL
-  checkStatus(); //display the entire map of each lane
+  void isVacant(CarType);//check if there is a parking spot and display VACANT or FULL
+
+  void checkStatus(); //display the entire map of each lane
   
   //I think we will need a copy constructor and or an assignment operator overloading
   //because we will be assigning child classes to base class later on
